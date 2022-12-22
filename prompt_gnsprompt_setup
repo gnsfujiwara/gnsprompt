@@ -1,0 +1,28 @@
+#
+# gnsprompt
+# Author: gnsfujiwara (Gustavo Vinícios de Souza)
+#
+
+directory() {
+    print "%F{cyan}%(4~|.../%3~|%~)%f"
+}
+
+prompt_indicator() {
+    if [ $UID -ne 0 ]; then
+        indicator="λ"
+        print "%F{yellow}$indicator%f"
+    fi
+
+    if [ $UID -eq 0 ]; then
+        indicator="α"
+        print "%F{red}$indicator%f"
+    fi
+}
+
+prompt_gnsprompt_setup() {
+    PS1="$(directory) $(prompt_indicator) "
+}
+
+prompt_gnsprompt_setup "$@"
+
+# vim: ft=zsh
