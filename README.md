@@ -4,7 +4,7 @@ A simple zsh prompt made for personal use, but can be useful to someone.
 
 ### Screenshot
 
-./screenshot.png
+![Screenshot](./screenshot.png)
 
 ## License
 
